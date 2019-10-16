@@ -10,8 +10,13 @@
 
 ### Resources
 http://infosiap.siap.gob.mx/gobmx/datosAbiertos.php
+
 http://clicom-mex.cicese.mx/
+
 https://www.kaggle.com/lava18/google-play-store-apps/download
+
 https://www.kaggle.com/ramamet4/app-store-apple-data-set-10k-apps
+
 https://cs.stanford.edu/~ermon/papers/cropyield_AAAI17.pdf
+
 http://sustain.stanford.edu/crop-yield-analysis
