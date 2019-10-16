@@ -18,6 +18,6 @@
 
 #### [Apple App Store](https://www.kaggle.com/ramamet4/app-store-apple-data-set-10k-apps)
 
-#### [Deep Gaussian Process for Crop Yield Prediction Based on Remote Sensing Data(https://cs.stanford.edu/~ermon/papers/cropyield_AAAI17.pdf)
+#### [Deep Gaussian Process for Crop Yield Prediction Based on Remote Sensing Data](https://cs.stanford.edu/~ermon/papers/cropyield_AAAI17.pdf)
 
 #### [Sustain Stanford](http://sustain.stanford.edu/crop-yield-analysis)
