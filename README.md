@@ -9,14 +9,15 @@
   Second, the two of us frequently had arguments regarding the quality of apps within Google’s Android ecosystem as opposed to that of Apple’s iOS ecosystem relative to the price you are paying for those apps. For that reason, we have acquired the datasets of Google Play Store and Apple iOS App Store from Kaggle. Although we are a bit concerned about the usability of the Google Play Store dataset due to lack of relevant metadata such as the column descriptions, we wish to compare certain variables of similar apps from the two datasets and draw the differences in popularity, price, ratings and elasticity. These analyses can be done at multiple levels some of which may be less obvious yet just as interesting. We are considering are each app store, per genre, by content ratings, by price ranges, and per common app. Using such analyses, one could help answer such questions that many might have wondered. For example, what genres of apps are more profitable and for which markets? How does a titan in its genre space influence the popularity of the genre as a whole, for example Spotify boosting music apps or Twitter and Facebook boosting social media apps. How does the populace prefer paid apps as opposed to their free alternatives by app store? Informing a person of such knowledge may be able to sway them to the other side when it comes to their next smartphone.
 
 ### Resources
-http://infosiap.siap.gob.mx/gobmx/datosAbiertos.php
 
-http://clicom-mex.cicese.mx/
+#### http://infosiap.siap.gob.mx/gobmx/datosAbiertos.php
 
-https://www.kaggle.com/lava18/google-play-store-apps/download
+#### http://clicom-mex.cicese.mx/
 
-https://www.kaggle.com/ramamet4/app-store-apple-data-set-10k-apps
+#### https://www.kaggle.com/lava18/google-play-store-apps/download
 
-https://cs.stanford.edu/~ermon/papers/cropyield_AAAI17.pdf
+#### https://www.kaggle.com/ramamet4/app-store-apple-data-set-10k-apps
 
-http://sustain.stanford.edu/crop-yield-analysis
+#### https://cs.stanford.edu/~ermon/papers/cropyield_AAAI17.pdf
+
+#### http://sustain.stanford.edu/crop-yield-analysis
