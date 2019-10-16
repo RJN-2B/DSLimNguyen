@@ -1,37 +1,16 @@
-## Welcome to GitHub Pages
+# Data Science CMPS3660 Final Project
+## Roland Nguyen and Chanho Lim
+### Milestone 1
 
-You can use the [editor on GitHub](https://github.com/RJN-2B/DSLimNguyen/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+  As listed above, Roland and Chanho are working together on this project. We are both from a similar background in math and computer science with our coursework emphasizing statistical analysis, but our interests and values vastly differ. Currently, we are considering two different themes that encompass multiple datasets that are vastly different from each other – municipality-level yield data from SIAP with temperature and rainfall data from CLICOM and the Google Play Store Apps (10k apps) compared to the Apple iOS App Store data (7200 apps). We have looked through the format of each dataset, leading us to believe that they are quite promising as we feel they can become tidy data with a bit of munging and melting, which will benefit us in organizing the data we want to perform our analysis. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  First, we want to competently predict corn yields in Mexico at disaggregated level through municipality-level yield data from SIAP and temperature and rainfall data from CLICOM. Chanho  has acquired this dataset from his Machine Learning study group where a few of his colleagues from different areas of study gather interesting ideas that can be used with Machine Learning. One of the biggest challenges we face with these datasets are understanding the columns and variables as they are written in Spanish and comprehending how crop yield predictions work. As such, we are currently looking into the Sustain group at Stanford to learn how to perform crop yield prediction analysis. Also, we are interested in bringing machine learning into this as we have seen examples from Stanford where they use deep Gaussian models using remote sensing data in Midwest America. 
 
-### Markdown
+  Second, the two of us frequently had arguments regarding the quality of apps within Google’s Android ecosystem as opposed to that of Apple’s iOS ecosystem relative to the price you are paying for those apps. For that reason, we have acquired the datasets of Google Play Store and Apple iOS App Store from Kaggle. Although we are a bit concerned about the usability of the Google Play Store dataset due to lack of relevant metadata such as the column descriptions, we wish to compare certain variables of similar apps from the two datasets and draw the differences in popularity, price, ratings and elasticity. These analyses can be done at multiple levels some of which may be less obvious yet just as interesting. We are considering are each app store, per genre, by content ratings, by price ranges, and per common app. Using such analyses, one could help answer such questions that many might have wondered. For example, what genres of apps are more profitable and for which markets? How does a titan in its genre space influence the popularity of the genre as a whole, for example Spotify boosting music apps or Twitter and Facebook boosting social media apps. How does the populace prefer paid apps as opposed to their free alternatives by app store? Informing a person of such knowledge may be able to sway them to the other side when it comes to their next smartphone.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RJN-2B/DSLimNguyen/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+http://infosiap.siap.gob.mx/gobmx/datosAbiertos.php
+http://clicom-mex.cicese.mx/
+https://www.kaggle.com/lava18/google-play-store-apps/download
+https://www.kaggle.com/ramamet4/app-store-apple-data-set-10k-apps
+https://cs.stanford.edu/~ermon/papers/cropyield_AAAI17.pdf
+http://sustain.stanford.edu/crop-yield-analysis
