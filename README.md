@@ -10,14 +10,14 @@
 
 ### Resources
 
-#### http://infosiap.siap.gob.mx/gobmx/datosAbiertos.php
+#### [Municipality-level yield data SIAP](http://infosiap.siap.gob.mx/gobmx/datosAbiertos.php)
 
-#### http://clicom-mex.cicese.mx/
+#### [temp and rainfall from CLICOM](http://clicom-mex.cicese.mx/)
 
-#### https://www.kaggle.com/lava18/google-play-store-apps/download
+#### [Google Play Store dataset](https://www.kaggle.com/lava18/google-play-store-apps/download)
 
-#### https://www.kaggle.com/ramamet4/app-store-apple-data-set-10k-apps
+#### [Apple App Store](https://www.kaggle.com/ramamet4/app-store-apple-data-set-10k-apps)
 
-#### https://cs.stanford.edu/~ermon/papers/cropyield_AAAI17.pdf
+#### [Deep Gaussian Process for Crop Yield Prediction Based on Remote Sensing Data(https://cs.stanford.edu/~ermon/papers/cropyield_AAAI17.pdf)
 
-#### http://sustain.stanford.edu/crop-yield-analysis
+#### [Sustain Stanford](http://sustain.stanford.edu/crop-yield-analysis)
