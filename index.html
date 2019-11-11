@@ -13155,7 +13155,42 @@ CMPS3660 Milestone 1</p>
 <span class="n">ggplay_df</span><span class="o">.</span><span class="n">Price</span> <span class="o">=</span> <span class="n">ggplay_df</span><span class="o">.</span><span class="n">Price</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
 <span class="n">rating_bins</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]</span>
 <span class="n">ggplay_df</span><span class="p">[</span><span class="s1">&#39;bin_rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">ggplay_df</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">],</span> <span class="n">rating_bins</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ggplay_df</span><span class="o">.</span><span class="n">Installs</span> <span class="o">=</span> <span class="n">ggplay_df</span><span class="o">.</span><span class="n">Installs</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Free&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span>
+<span class="n">ggplay_df</span><span class="o">.</span><span class="n">Installs</span> <span class="o">=</span> <span class="n">ggplay_df</span><span class="o">.</span><span class="n">Installs</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()]))</span>
+<span class="n">ggplay_df</span> <span class="o">=</span> <span class="n">ggplay_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Installs&#39;</span> <span class="p">:</span> <span class="s1">&#39;Installs_plus&#39;</span><span class="p">})</span>
+<span class="n">ggplay_df</span><span class="o">.</span><span class="n">Installs_plus</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">ggplay_df</span><span class="o">.</span><span class="n">Installs_plus</span> <span class="o">=</span> <span class="n">ggplay_df</span><span class="o">.</span><span class="n">Installs_plus</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">apple_df</span> <span class="o">=</span> <span class="n">apple_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;user_rating&#39;</span> <span class="p">:</span> <span class="s1">&#39;Rating&#39;</span><span class="p">,</span><span class="s1">&#39;track_name&#39;</span> <span class="p">:</span> <span class="s1">&#39;App&#39;</span><span class="p">,</span> <span class="s1">&#39;ver&#39;</span> <span class="p">:</span> <span class="s1">&#39;Current Ver&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span> <span class="p">:</span> <span class="s1">&#39;Price&#39;</span><span class="p">,</span> <span class="s1">&#39;prime_genre&#39;</span> <span class="p">:</span> <span class="s1">&#39;Genres&#39;</span><span class="p">,</span> <span class="s1">&#39;size_bytes&#39;</span> <span class="p">:</span> <span class="s1">&#39;Size&#39;</span><span class="p">,</span> <span class="s1">&#39;cont_rating&#39;</span> <span class="p">:</span> <span class="s1">&#39;Content Rating&#39;</span><span class="p">})</span>
+<span class="n">apple_df</span> <span class="o">=</span> <span class="n">apple_df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;rating_count_tot&#39;</span><span class="p">,</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;Size&#39;</span><span class="p">,</span> <span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span><span class="s1">&#39;sup_devices.num&#39;</span><span class="p">,</span> <span class="s1">&#39;ipadSc_urls.num&#39;</span><span class="p">,</span> <span class="s1">&#39;lang.num&#39;</span><span class="p">,</span> <span class="s1">&#39;vpp_lic&#39;</span> <span class="p">,</span> <span class="s1">&#39;currency&#39;</span><span class="p">,</span> <span class="s1">&#39;Current Ver&#39;</span><span class="p">,</span> <span class="s1">&#39;user_rating_ver&#39;</span><span class="p">,</span> <span class="s1">&#39;rating_count_ver&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">apple_df</span><span class="p">[</span><span class="s1">&#39;Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">apple_df</span><span class="p">[</span><span class="s1">&#39;Price&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">0.00</span><span class="p">,</span> <span class="s1">&#39;Free&#39;</span><span class="p">,</span> <span class="s1">&#39;Paid&#39;</span><span class="p">)</span>
+<span class="n">apple_df</span> <span class="o">=</span> <span class="n">apple_df</span><span class="p">[[</span><span class="s1">&#39;App&#39;</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Type&#39;</span><span class="p">,</span> <span class="s1">&#39;Price&#39;</span><span class="p">,</span> <span class="s1">&#39;Content Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Genres&#39;</span><span class="p">]]</span>
+
 <span class="n">display</span><span class="p">(</span><span class="n">ggplay_df</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">apple_df</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13193,7 +13228,7 @@ CMPS3660 Milestone 1</p>
       <th></th>
       <th>App</th>
       <th>Rating</th>
-      <th>Installs</th>
+      <th>Installs_plus</th>
       <th>Type</th>
       <th>Price</th>
       <th>Content Rating</th>
@@ -13206,7 +13241,7 @@ CMPS3660 Milestone 1</p>
       <td>0</td>
       <td>Photo Editor &amp; Candy Camera &amp; Grid &amp; ScrapBook</td>
       <td>4.1</td>
-      <td>10,000+</td>
+      <td>10000</td>
       <td>Free</td>
       <td>0.0</td>
       <td>Everyone</td>
@@ -13217,7 +13252,7 @@ CMPS3660 Milestone 1</p>
       <td>1</td>
       <td>Coloring book moana</td>
       <td>3.9</td>
-      <td>500,000+</td>
+      <td>500000</td>
       <td>Free</td>
       <td>0.0</td>
       <td>Everyone</td>
@@ -13228,7 +13263,7 @@ CMPS3660 Milestone 1</p>
       <td>2</td>
       <td>U Launcher Lite – FREE Live Cool Themes, Hide ...</td>
       <td>4.7</td>
-      <td>5,000,000+</td>
+      <td>5000000</td>
       <td>Free</td>
       <td>0.0</td>
       <td>Everyone</td>
@@ -13239,7 +13274,7 @@ CMPS3660 Milestone 1</p>
       <td>3</td>
       <td>Sketch - Draw &amp; Paint</td>
       <td>4.5</td>
-      <td>50,000,000+</td>
+      <td>50000000</td>
       <td>Free</td>
       <td>0.0</td>
       <td>Teen</td>
@@ -13250,7 +13285,7 @@ CMPS3660 Milestone 1</p>
       <td>4</td>
       <td>Pixel Draw - Number Art Coloring Book</td>
       <td>4.3</td>
-      <td>100,000+</td>
+      <td>100000</td>
       <td>Free</td>
       <td>0.0</td>
       <td>Everyone</td>
@@ -13272,7 +13307,7 @@ CMPS3660 Milestone 1</p>
       <td>10836</td>
       <td>Sya9a Maroc - FR</td>
       <td>4.5</td>
-      <td>5,000+</td>
+      <td>5000</td>
       <td>Free</td>
       <td>0.0</td>
       <td>Everyone</td>
@@ -13283,7 +13318,7 @@ CMPS3660 Milestone 1</p>
       <td>10837</td>
       <td>Fr. Mike Schmitz Audio Teachings</td>
       <td>5.0</td>
-      <td>100+</td>
+      <td>100</td>
       <td>Free</td>
       <td>0.0</td>
       <td>Everyone</td>
@@ -13294,7 +13329,7 @@ CMPS3660 Milestone 1</p>
       <td>10838</td>
       <td>Parkinson Exercices FR</td>
       <td>NaN</td>
-      <td>1,000+</td>
+      <td>1000</td>
       <td>Free</td>
       <td>0.0</td>
       <td>Everyone</td>
@@ -13305,7 +13340,7 @@ CMPS3660 Milestone 1</p>
       <td>10839</td>
       <td>The SCP Foundation DB fr nn5n</td>
       <td>4.5</td>
-      <td>1,000+</td>
+      <td>1000</td>
       <td>Free</td>
       <td>0.0</td>
       <td>Mature 17+</td>
@@ -13316,7 +13351,7 @@ CMPS3660 Milestone 1</p>
       <td>10840</td>
       <td>iHoroscope - 2018 Daily Horoscope &amp; Astrology</td>
       <td>4.5</td>
-      <td>10,000,000+</td>
+      <td>10000000</td>
       <td>Free</td>
       <td>0.0</td>
       <td>Everyone</td>
@@ -13330,49 +13365,6 @@ CMPS3660 Milestone 1</p>
 </div>
 
 </div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ggplay_df</span><span class="o">.</span><span class="n">Installs</span> <span class="o">=</span> <span class="n">ggplay_df</span><span class="o">.</span><span class="n">Installs</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Free&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span>
-<span class="n">ggplay_df</span><span class="o">.</span><span class="n">Installs</span> <span class="o">=</span> <span class="n">ggplay_df</span><span class="o">.</span><span class="n">Installs</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()]))</span>
-<span class="n">ggplay_df</span> <span class="o">=</span> <span class="n">ggplay_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Installs&#39;</span> <span class="p">:</span> <span class="s1">&#39;Installs_plus&#39;</span><span class="p">})</span>
-<span class="n">ggplay_df</span><span class="o">.</span><span class="n">Installs_plus</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-<span class="n">ggplay_df</span><span class="o">.</span><span class="n">Installs_plus</span> <span class="o">=</span> <span class="n">ggplay_df</span><span class="o">.</span><span class="n">Installs_plus</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">apple_df</span> <span class="o">=</span> <span class="n">apple_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;user_rating&#39;</span> <span class="p">:</span> <span class="s1">&#39;Rating&#39;</span><span class="p">,</span><span class="s1">&#39;track_name&#39;</span> <span class="p">:</span> <span class="s1">&#39;App&#39;</span><span class="p">,</span> <span class="s1">&#39;ver&#39;</span> <span class="p">:</span> <span class="s1">&#39;Current Ver&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span> <span class="p">:</span> <span class="s1">&#39;Price&#39;</span><span class="p">,</span> <span class="s1">&#39;prime_genre&#39;</span> <span class="p">:</span> <span class="s1">&#39;Genres&#39;</span><span class="p">,</span> <span class="s1">&#39;size_bytes&#39;</span> <span class="p">:</span> <span class="s1">&#39;Size&#39;</span><span class="p">,</span> <span class="s1">&#39;cont_rating&#39;</span> <span class="p">:</span> <span class="s1">&#39;Content Rating&#39;</span><span class="p">})</span>
-<span class="n">apple_df</span> <span class="o">=</span> <span class="n">apple_df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;rating_count_tot&#39;</span><span class="p">,</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;Size&#39;</span><span class="p">,</span> <span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span><span class="s1">&#39;sup_devices.num&#39;</span><span class="p">,</span> <span class="s1">&#39;ipadSc_urls.num&#39;</span><span class="p">,</span> <span class="s1">&#39;lang.num&#39;</span><span class="p">,</span> <span class="s1">&#39;vpp_lic&#39;</span> <span class="p">,</span> <span class="s1">&#39;currency&#39;</span><span class="p">,</span> <span class="s1">&#39;Current Ver&#39;</span><span class="p">,</span> <span class="s1">&#39;user_rating_ver&#39;</span><span class="p">,</span> <span class="s1">&#39;rating_count_ver&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">apple_df</span><span class="p">[</span><span class="s1">&#39;Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">apple_df</span><span class="p">[</span><span class="s1">&#39;Price&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">0.00</span><span class="p">,</span> <span class="s1">&#39;Free&#39;</span><span class="p">,</span> <span class="s1">&#39;Paid&#39;</span><span class="p">)</span>
-<span class="n">apple_df</span> <span class="o">=</span> <span class="n">apple_df</span><span class="p">[[</span><span class="s1">&#39;App&#39;</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Type&#39;</span><span class="p">,</span> <span class="s1">&#39;Price&#39;</span><span class="p">,</span> <span class="s1">&#39;Content Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Genres&#39;</span><span class="p">]]</span>
-
-
-<span class="n">display</span><span class="p">(</span><span class="n">apple_df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
 
 <div class="output_area">
 
@@ -13453,8 +13445,63 @@ CMPS3660 Milestone 1</p>
       <td>4+</td>
       <td>Reference</td>
     </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>7192</td>
+      <td>Kubik</td>
+      <td>4.5</td>
+      <td>Free</td>
+      <td>0.00</td>
+      <td>4+</td>
+      <td>Games</td>
+    </tr>
+    <tr>
+      <td>7193</td>
+      <td>VR Roller-Coaster</td>
+      <td>4.5</td>
+      <td>Free</td>
+      <td>0.00</td>
+      <td>4+</td>
+      <td>Games</td>
+    </tr>
+    <tr>
+      <td>7194</td>
+      <td>Bret Michaels Emojis + Lyric Keyboard</td>
+      <td>4.5</td>
+      <td>Paid</td>
+      <td>1.99</td>
+      <td>9+</td>
+      <td>Utilities</td>
+    </tr>
+    <tr>
+      <td>7195</td>
+      <td>VR Roller Coaster World - Virtual Reality</td>
+      <td>4.5</td>
+      <td>Free</td>
+      <td>0.00</td>
+      <td>12+</td>
+      <td>Games</td>
+    </tr>
+    <tr>
+      <td>7196</td>
+      <td>Escape the Sweet Shop Series</td>
+      <td>5.0</td>
+      <td>Free</td>
+      <td>0.00</td>
+      <td>4+</td>
+      <td>Games</td>
+    </tr>
   </tbody>
 </table>
+<p>7197 rows × 6 columns</p>
 </div>
 </div>
 
@@ -13651,7 +13698,7 @@ Furthermore, we also see that Google Play Store has very few apps below 2 stars.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x222258de710&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1ea137aabe0&gt;</pre>
 </div>
 
 </div>
@@ -13701,7 +13748,7 @@ Furthermore, we also see that Google Play Store has very few apps below 2 stars.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x222259826a0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1ea13841b70&gt;</pre>
 </div>
 
 </div>
