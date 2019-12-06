@@ -14837,7 +14837,7 @@ dtype: float64
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We have chosen to use imputation by random normal.</p>
-<p>We notice that there seems to be a minimum k at k = 78 with a test error of 71.437288 for the Apple Dataset.</p>
+<p>We notice that there seems to be a minimum k at k = 41 with a test error of 71.743 for the Apple Dataset.</p>
 <hr>
 <p>Now for the Google Play Dataset, we will do the same. Here too we have chosen to use imputation by random normal.</p>
 
@@ -14912,8 +14912,8 @@ dtype: float64
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We notice that there seems to be a minimum k at k = 4 with a test error of 2315.367445 for the Play Store Dataset.</p>
-<p>Our interpretation of this is that it is due to the fact that Google Play's Paid apps in this dataset has a population of 800 rows, while Apple has 2885.</p>
+<p>We notice that there seems to be a minimum k at k = 5 with a test error of 2501.539 for the Play Store Dataset.</p>
+<p>Our interpretation of this is that it is due to the fact that Google Play's Paid apps in this dataset has a population of 756 rows, while Apple has 2885.</p>
 <hr>
 <p>We now choose to run the KNN with the above specified game for everyone+ and a rating of 4.5.</p>
 <p>We run it with both datasets for each k found.</p>
